@@ -16,7 +16,19 @@ const Trainers = () => {
       <Container>
         <Title title='Join Out' titlePrimary='Trainer' />
         <div>
-          <Swiper spaceBetween={50} slidesPerView={3}>
+          <Swiper spaceBetween={50} slidesPerView={3}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              640: {
+                slidesPerView: 2,
+              },
+              768: {
+                slidesPerView: 3,
+              },
+            }}
+            >
             <SwiperSlide>
               <div className='relative w-full h-[70vh] mx-auto'>
                 <Image
